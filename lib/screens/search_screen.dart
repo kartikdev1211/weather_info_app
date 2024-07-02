@@ -26,6 +26,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Weather App"),
@@ -42,8 +43,8 @@ class _SearchScreenState extends State<SearchScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10))),
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: h / 10,
             ),
             ElevatedButton.icon(
               onPressed: () {
